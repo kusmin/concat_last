@@ -1,6 +1,6 @@
 package concat
 
-class Categoria {
+class Fornecedor {
 
     String nome
 

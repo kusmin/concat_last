@@ -3,7 +3,7 @@ package concat
 class Categoria {
 
     String nome
-    String toString() = {
+    String toString() {
         this.nome
     }
 

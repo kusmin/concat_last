@@ -1,0 +1,8 @@
+version: "3"
+
+services:
+  concot_database:
+    build: ./mysql
+    container_name: concot_database
+    ports:
+      - 3306:3306

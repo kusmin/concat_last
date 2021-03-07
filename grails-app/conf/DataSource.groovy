@@ -10,7 +10,7 @@ hibernate {
     cache.use_query_cache = false
     //    cache.region.factory_class = 'org.hibernate.cache.SingletonEhCacheRegionFactory' // Hibernate 3
     cache.region.factory_class = 'net.sf.ehcache.hibernate.EnCacheRegionFactory' // Hibernate 4
-    dialect = 'org.hibernate.dialect.MySQLInnoDBDialect'
+    dialect = 'org.hibernate.dialect.MySQL5InnoDBDialect'
     singleSession = true // configure OSIV singleSession mode
     flush.mode = 'manual' // OSIV session flush mode outside of transactional context
 }
@@ -35,13 +35,13 @@ environments {
             url = 'jdbc:mysql://192.168.2.20:3306/concot'
             properties {
                 // See http://grails.org/doc/latest/guide/conf.html#dataSource for documentation
-                // jmxEnabled = true
-                // initialSize = 5
+                jmxEnabled = true
+                initialSize = 5
                 maxActive = -1
-                // minIdle = 5
-                // maxIdle = 25
-                // maxWait = 10000
-                // maxAge = 10 * 60000
+                minIdle = 5
+                maxIdle = 25
+                maxWait = 10000
+                maxAge = 10 * 60000
                 timeBetweenEvictionRunsMillis = 180000
                 minEvictableIdleTimeMillis = 180000
                 numTestPerEvictionRun = 3
